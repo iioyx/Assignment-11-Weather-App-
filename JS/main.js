@@ -14,7 +14,7 @@ btn.addEventListener('click', function(){
 });
 
 async function getWeather(location = Search.value) {
-        let result = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=70922293e0264ef0ac2211409241506&q=${location}&days=3`);
+        let result = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=70922293e0264ef0ac2211409241506&q=${location}&days=3`);
         if (result.ok) {
             let response = await result.json();
             displayNow(response);
